@@ -1,0 +1,50 @@
+{
+  "name": "@osspim/koa-middleware-apollo",
+  "version": "0.2.0",
+  "description": "Apollo server implementation that uses the traditional koa middleware pattern",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ossgroupp/koa-middleware-apollo.git"
+  },
+  "keywords": [
+    "graphql",
+    "koa",
+    "middleware",
+    "osspim"
+  ],
+  "main": "index.js",
+  "author": "Michael Smesnik <michael@ossgroupp.com>",
+  "license": "MIT",
+  "scripts": {
+    "preversion": "npm run lint && npm run test",
+    "lint": "standard",
+    "format": "prettier-standard \"index.js\" \"test/*.js\"",
+    "test": "NODE_ENV=test mocha test/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "expect"
+    ]
+  },
+  "devDependencies": {
+    "@tailored-apps/helpers": "^1.1.1",
+    "chai": "^4.2.0",
+    "husky": "^2.1.0",
+    "mocha": "^6.1.4",
+    "prettier-standard": "^9.1.1",
+    "sinon": "^7.3.2",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "apollo-server-core": "^2.4.8",
+    "graphql": "^14.2.1",
+    "graphql-playground-html": "^1.6.25"
+  }
+}
